@@ -1,0 +1,1 @@
+C:\sonar-runner-dist-2.3\sonar-runner-2.3\bin\sonar-runner.bat

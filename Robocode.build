@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="andrewtatham" basedir="." default="build">
+  <description>Robocode</description>
+
+  <property name="config" value="Release" readonly="true"/>
+  <property name="verbosity" value ="detailed" readonly="true"/>
+
+  <property name="msbuild" value="C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe" readonly="true"/>
+  <property name="nugetExe" value="packages\NuGet.CommandLine.2.2.0\tools\NuGet.exe" readonly="true"/>
+  <property name="nunitExe" value="packages\NUnit.Runners.2.6.2\tools\nunit-console.exe" readonly="true"/>
+  <property name="mbunitExe" value="C:\Program Files\Gallio\bin\Gallio.Echo.exe" readonly="true"/>
+  <property name="opencoverExe" value="packages\OpenCover.4.0.1118\OpenCover.Console.exe" readonly="true"/>
+  <property name="ReportGeneratorExe" value="packages\ReportGenerator.1.7.2.0\ReportGenerator.exe" readonly="true"/>
+  <property name="fxCopExe" value="C:\Program Files (x86)\Microsoft Fxcop 10.0\FxCopCmd.exe" readonly="true"/>
+
+  <property name="UnitTestDllPath" value="AndrewTatham.UnitTests\bin\${config}\AndrewTatham.UnitTests.dll" readonly="true"/>
+
+  <property name="BehaviorTestDllPath" value="AndrewTatham.BehaviorTests\bin\${config}\AndrewTatham.BehaviorTests.dll" readonly="true"/>
+
+  <property name="BattleTestRunIn" value="C:\robocode\libs" readonly="true"/>
+  <property name="BattleTestDllPath" value="${BattleTestRunIn}\AndrewTatham.BattleTests.dll" readonly="true"/>
+  <property name="BattleTestReportsDir" value="${BattleTestRunIn}\Reports" readonly="true"/>
+  <property name="BattleTestResultsXml" value="${BattleTestReportsDir}\BattleTestResults.xml" readonly="true"/>
+  <property name="BattleTestScoresHtml" value="${BattleTestReportsDir}\Scores.html" readonly="true"/>
+
+  <property name="WorkspaceDir" value="*** WorkspaceDir TO BE SET BY COMMAND LINE PARAM ***" overwrite="false"/>
+  <property name="WorkspaceReportsDir" value="${WorkspaceDir}\Reports" readonly="true"/>
+  <property name="WorkspaceBattleTestResultsXml" value="${WorkspaceReportsDir}\BattleTestResults.xml" readonly="true"/>
+  <property name="WorkspaceBattleTestScoresHtml" value="${WorkspaceReportsDir}\Scores.html" readonly="true"/>
+  
+  <target name="PreRequisites">
+    <mkdir dir="Reports"/>
+  </target>
+
+
+  <target name="nuget">
+    <exec program="${nugetExe}">
+      <arg line="update" />
+      <arg line="AndrewTatham\packages.config" />
+    </exec>
+    <exec program="${nugetExe}">
+      <arg line="update" />
+      <arg line="AndrewTatham.UnitTests\packages.config" />
+    </exec>
+    <exec program="${nugetExe}">
+      <arg line="update" />
+      <arg line="AndrewTatham.BattleTests\packages.config" />
+    </exec>
+  </target>
+  
+  <target name="Build">
+    <exec program="${msbuild}">
+      <!--<arg line="/verbosity=${verbosity}" />-->
+      <arg line="Robocode.sln" />
+      <arg line="/p:Configuration=${config}" />
+    </exec>
+  </target>
+  
+  <target name="UnitTest">
+    <exec program="${nunitExe}">
+      <arg line="${UnitTestDllPath}" />
+      <arg line="${BehaviorTestDllPath}" />	  
+      <arg line="/noshadow" />
+      <arg line="/xml:Reports\UnitTestResults.xml" />
+
+    </exec>
+  </target>
+  
+  <target name="Coverage">
+    <exec program="${opencoverExe}"
+          >
+      <arg line="-register:user" />
+      <arg line='-target:"${nunitExe}"' />
+      <arg line='-targetargs:"${UnitTestDllPath} ${BehaviorTestDllPath} /noshadow /xml:Reports\UnitTestResults.xml"' />
+      <arg line='-filter:"+[AndrewTatham*]* -[AndrewTatham.UnitTests*]* -[AndrewTatham.BehaviorTests*]* -[AndrewTatham.BattleTests*]*"' />
+      <arg line="-output:Reports\OpenCoverResults.xml" />
+    </exec>
+    <exec program="${ReportGeneratorExe}"
+         >
+      <arg line="Reports\OpenCoverResults.xml" />
+      <arg line='Reports\Coverage' />
+    </exec>
+  </target>
+  
+  <target name="Violations">
+    <exec program="${fxCopExe}" failonerror="false">
+      <arg line="/project:Robocode.fxcop" />
+      <arg line="/out:Reports\FxcopResults.xml" />
+      <arg line="/dictionary:CustomDictionary.xml" />
+    </exec>
+  </target>
+  
+  <target name="BattleTest">
+	<echo message="BattleTestReportsDir: ${BattleTestReportsDir}"/>
+	<echo message="BattleTestResultsXml: ${BattleTestResultsXml}"/>
+	<echo message="BattleTestScoresHtml: ${BattleTestScoresHtml}"/>
+	<echo message="WorkspaceDir: ${WorkspaceDir}"/>
+	<echo message="WorkspaceBattleTestResultsXml: ${WorkspaceBattleTestResultsXml}"/>
+	<echo message="WorkspaceBattleTestScoresHtml: ${WorkspaceBattleTestScoresHtml}"/>
+  
+	<mkdir dir="${BattleTestReportsDir}"/>
+
+    <exec program="${mbunitExe}" failonerror="false" workingdir="${BattleTestRunIn}">
+      <arg line="${BattleTestDllPath}" />
+      <arg line="/rd:Reports" />
+      <arg line="/rnf:BattleTestResults" />
+      <arg line="/rt:Xml" />
+
+    </exec>
+
+    <!--<exec program="${nunitExe}" failonerror="false" workingdir="${BattleTestRunIn}">
+      <arg line="${BattleTestDllPath}"/>
+      <arg line="/noshadow" />
+      <arg line="/xml:Reports\BattleTestResults.xml" />
+
+    </exec>-->
+	<copy file="${BattleTestResultsXml}" tofile="${WorkspaceBattleTestResultsXml}"/>
+	<copy file="${BattleTestScoresHtml}" tofile="${WorkspaceBattleTestScoresHtml}"/>
+	
+	
+	
+  </target>
+
+  <target name="CIBuild">
+    <call target="PreRequisites" />
+    <call target="nuget" />
+    <call target="Build" />
+    <call target="Coverage" />
+    <!--<call target="Violations" />-->
+  </target>
+  <target name="CITest">
+    <call target="PreRequisites" />
+    <call target="nuget" />
+    <call target="Build" />
+    <call target="BattleTest" />
+  </target>
+</project>

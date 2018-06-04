@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{70135C7E-0811-4AE0-9748-B14F3A7F63DA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AndrewTatham.UnitTests</RootNamespace>
+    <AssemblyName>AndrewTatham.UnitTests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.0.0-rc1\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0-rc1\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServerCompact">
+      <HintPath>..\packages\EntityFramework.SqlServerCompact.6.0.0-rc1\lib\net40\EntityFramework.SqlServerCompact.dll</HintPath>
+    </Reference>
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.4.1.1309.1617\lib\net40\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.2\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="robocode">
+      <HintPath>C:\robocode\libs\robocode.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\lib\net40\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BattleTests\Fixtures\BattleResultAdapterUnitTestFixture.cs" />
+    <Compile Include="BattleTests\Reports\ScoreReportDataUnitTestFixture.cs" />
+    <Compile Include="BattleTests\TestCases\BattleTestCaseUnitTestFixture.cs" />
+    <Compile Include="BattleTests\TestCases\RobotPrioritizerUnitTestFixture.cs" />
+    <Compile Include="BattleTests\TestCases\ClassifierUnitTestFixture.cs" />
+    <Compile Include="BattleTests\TestCases\ScoreBoardUnitTestFixture.cs" />
+    <Compile Include="BattleTests\TestCases\ScoreUnitTestFixture.cs" />
+    <Compile Include="BattleTests\TestCases\TestCaseFactoryUnitTestFixture.cs" />
+    <Compile Include="Helpers\AngleUnitTests.cs" />
+    <Compile Include="Helpers\BlipUnitTests.cs" />
+    <Compile Include="Helpers\EnemyUnitTests.cs" />
+    <Compile Include="Helpers\VectorUnitTests.cs" />
+    <Compile Include="Helpers\VirtualBulletUnitTests.cs" />
+    <Compile Include="Logic\Behaviours\BaseBehaviourUnitTests.cs" />
+    <Compile Include="Logic\Behaviours\MeleeBehaviourUnitTests.cs" />
+    <Compile Include="Logic\Behaviours\OneVsOneBehaviourUnitTests.cs" />
+    <Compile Include="Logic\Behaviours\SearchBehaviourUnitTests.cs" />
+    <Compile Include="Logic\Behaviours\Strategies\Aiming\GuessFactor\GuessFactorAimingUnitTests.cs" />
+    <Compile Include="Logic\Behaviours\Strategies\BaseStrategyUnitTestFixture.cs" />
+    <Compile Include="Logic\Behaviours\Strategies\Radar\ScanTargetRadarUnitTests.cs" />
+    <Compile Include="Logic\Behaviours\VictoryBehaviourUnitTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RunSimulationUnitTestFixture.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Logic\Behaviours\Strategies\Movement\Forces\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AndrewTatham.BattleTests\AndrewTatham.BattleTests.csproj">
+      <Project>{ba9096ef-68a9-475f-8382-280672c2f2f7}</Project>
+      <Name>AndrewTatham.BattleTests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\andrewtatham\AndrewTatham.csproj">
+      <Project>{e3eb8cd8-92e9-4bad-9ef7-33eb53d97cbc}</Project>
+      <Name>AndrewTatham</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    if not exist "$(TargetDir)x86" md "$(TargetDir)x86"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\*.*" "$(TargetDir)x86"
+    if not exist "$(TargetDir)amd64" md "$(TargetDir)amd64"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\*.*" "$(TargetDir)amd64"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

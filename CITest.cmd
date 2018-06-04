@@ -1,0 +1,1 @@
+packages\NAnt.Portable.0.92\NAnt.exe -D:WorkspaceDir=%1 CITest 

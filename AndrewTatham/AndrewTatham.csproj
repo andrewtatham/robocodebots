@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E3EB8CD8-92E9-4BAD-9EF7-33EB53D97CBC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AndrewTatham</RootNamespace>
+    <AssemblyName>AndrewTatham</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <CodeContractsAssemblyMode>0</CodeContractsAssemblyMode>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeContractsEnableRuntimeChecking>False</CodeContractsEnableRuntimeChecking>
+    <CodeContractsRuntimeOnlyPublicSurface>False</CodeContractsRuntimeOnlyPublicSurface>
+    <CodeContractsRuntimeThrowOnFailure>True</CodeContractsRuntimeThrowOnFailure>
+    <CodeContractsRuntimeCallSiteRequires>False</CodeContractsRuntimeCallSiteRequires>
+    <CodeContractsRunCodeAnalysis>False</CodeContractsRunCodeAnalysis>
+    <CodeContractsNonNullObligations>False</CodeContractsNonNullObligations>
+    <CodeContractsBoundsObligations>False</CodeContractsBoundsObligations>
+    <CodeContractsArithmeticObligations>False</CodeContractsArithmeticObligations>
+    <CodeContractsContainerAnalysis>False</CodeContractsContainerAnalysis>
+    <CodeContractsRedundantAssumptions>False</CodeContractsRedundantAssumptions>
+    <CodeContractsRunInBackground>True</CodeContractsRunInBackground>
+    <CodeContractsShowSquigglies>False</CodeContractsShowSquigglies>
+    <CodeContractsUseBaseLine>False</CodeContractsUseBaseLine>
+    <CodeContractsEmitXMLDocs>False</CodeContractsEmitXMLDocs>
+    <CodeContractsCustomRewriterAssembly />
+    <CodeContractsCustomRewriterClass />
+    <CodeContractsLibPaths />
+    <CodeContractsExtraRewriteOptions />
+    <CodeContractsExtraAnalysisOptions />
+    <CodeContractsBaseLineFile />
+    <CodeContractsRuntimeCheckingLevel>Full</CodeContractsRuntimeCheckingLevel>
+    <CodeContractsReferenceAssembly>%28none%29</CodeContractsReferenceAssembly>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\andrewtatham.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\andrewtatham.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="robocode, Version=1.8.1.0, Culture=neutral, PublicKeyToken=43c1c8ae0e25a953, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\robocode\libs\robocode.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseAdvancedRobot.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Helpers\ColourPallette.cs" />
+    <Compile Include="IBaseAdvancedRobot.cs" />
+    <Compile Include="Logic\Behaviors\Strategies\Aiming\Firing\MeleeFiringStrategy.cs" />
+    <Compile Include="Logic\Behaviors\Strategies\Aiming\Firing\OneVsOneFiringStrategy.cs" />
+    <Compile Include="Logic\Behaviors\Strategies\Aiming\PredictionAlgorithms.cs" />
+    <Compile Include="Logic\Behaviors\Strategies\Aiming\Prediction\AveragePosition.cs" />
+    <Compile Include="Logic\Behaviors\Strategies\Aiming\Prediction\AverageVelocity.cs" />
+    <Compile Include="Logic\Behaviors\Strategies\Aiming\Prediction\CurrentPosition.cs" />
+    <Compile Include="Logic\Behaviors\Strategies\Aiming\Prediction\GuessFactorAiming.cs" />
+    <Compile Include="Logic\Behaviors\Strategies\Aiming\Prediction\GF\GFStatKey.cs" />
+    <Compile Include="Logic\Behaviors\Strategies\Aiming\Prediction\GF\GFStatValue.cs" />
+    <Compile Include="Logic\Behaviors\Strategies\Aiming\Prediction\GF\GuessFactorData.cs" />
+    <Compile Include="Logic\Behaviors\Strategies\Aiming\Prediction\GF\GuessFactorStatistics.cs" />
+    <Compile Include="Logic\Behaviors\Strategies\Aiming\Prediction\GF\VirtualBullet.cs" />
+    <Compile Include="Logic\Behaviors\Strategies\Aiming\Prediction\GF\VirtualBulletCollection.cs" />
+    <Compile Include="Logic\Behaviors\Strategies\Aiming\Prediction\LastBlipVelocity.cs" />
+    <Compile Include="Logic\Behaviors\Strategies\Aiming\Prediction\PlayItForward.cs" />
+    <Compile Include="Logic\Behaviors\Strategies\Aiming\Prediction\PredictionAlgorithm.cs" />
+    <Compile Include="Logic\Behaviors\Strategies\Aiming\Prediction\PredictionCollection.cs" />
+    <Compile Include="Logic\Behaviors\Strategies\Radar\ScanType.cs" />
+    <Compile Include="Logic\Behaviors\Strategies\Targeting\NoTarget.cs" />
+    <Compile Include="Logic\Behaviors\TargetBehavior.cs" />
+    <Compile Include="Logic\Enemies\BulletCollection.cs" />
+    <Compile Include="Logic\Enemies\EnemyGuessFactorData.cs" />
+    <Compile Include="Logic\Enemies\EnemyGuessFactorStatistics.cs" />
+    <Compile Include="IMyAdvancedRobot.cs" />
+    <Compile Include="Logic\Behaviors\Strategies\BaseStrategy.cs" />
+    <Compile Include="Logic\Behaviors\Strategies\Movement\Forces\AvoidCentreForce.cs" />
+    <Compile Include="Logic\Behaviors\Strategies\Movement\Forces\AvoidEnemyForce.cs" />
+    <Compile Include="Logic\Behaviors\Strategies\Movement\Forces\Force.cs" />
+    <Compile Include="Logic\Behaviors\Strategies\Movement\Forces\ForceCollection.cs" />
+    <Compile Include="Logic\Behaviors\Strategies\Movement\Forces\MaximumEnemyDistanceForce.cs" />
+    <Compile Include="Logic\Behaviors\Strategies\Movement\Forces\MiddleEnemyDistanceForce.cs" />
+    <Compile Include="Logic\Behaviors\Strategies\Movement\Forces\RandomForce.cs" />
+    <Compile Include="Logic\Behaviors\Strategies\Movement\Forces\TangentialOscillationForce.cs" />
+    <Compile Include="Logic\Behaviors\Strategies\Movement\Forces\AvoidWallForce.cs" />
+    <Compile Include="Logic\Behaviors\Strategies\Radar\RadarResult.cs" />
+    <Compile Include="Logic\Behaviors\VictoryBehavior.cs" />
+    <Compile Include="Logic\Enemies\IEnemy.cs" />
+    <Compile Include="Logic\IBrain.cs" />
+    <Compile Include="Logic\IContext.cs" />
+    <Compile Include="MyAdvancedRobot.cs" />
+    <Compile Include="Logic\Enemies\Blips.cs" />
+    <Compile Include="Logic\Enemies\Enemies.cs" />
+    <Compile Include="Helpers\ExtensionMethods.cs" />
+    <Compile Include="Helpers\IRender.cs" />
+    <Compile Include="Logic\Behaviors\Strategies\Movement\WaveSurfingMovement.cs" />
+    <Compile Include="Logic\Behaviors\Strategies\Targeting\TargetOnly.cs" />
+    <Compile Include="Helpers\Angle.cs" />
+    <Compile Include="Helpers\Vector.cs" />
+    <Compile Include="MyTargetRobot.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Helpers\RandomHelper.cs" />
+    <Compile Include="Logic\Enemies\Enemy.cs" />
+    <Compile Include="Logic\Enemies\Wave.cs" />
+    <Compile Include="Logic\Enemies\WaveCollection.cs" />
+    <Compile Include="Logic\Behaviors\Strategies\Aiming\AimResult.cs" />
+    <Compile Include="Logic\Behaviors\BaseBehavior.cs" />
+    <Compile Include="Logic\Behaviors\MeleeBehavior.cs" />
+    <Compile Include="Logic\Behaviors\OneVsOneBehavior.cs" />
+    <Compile Include="Logic\Behaviors\SearchBehavior.cs" />
+    <Compile Include="Logic\Behaviors\Strategies\Movement\NoMovement.cs" />
+    <Compile Include="Logic\Behaviors\Strategies\Movement\SearchMovement.cs" />
+    <Compile Include="Logic\Behaviors\Strategies\Radar\FullScanRadar.cs" />
+    <Compile Include="Logic\Behaviors\Strategies\Radar\ScanTargetRadar.cs" />
+    <Compile Include="Logic\Behaviors\Strategies\Movement\ForceMovement.cs" />
+    <Compile Include="Logic\Enemies\Blip.cs" />
+    <Compile Include="Logic\Context.cs" />
+    <Compile Include="Logic\Brain.cs" />
+    <Compile Include="Logic\Behaviors\Strategies\Targeting\TargetNearestEnemy.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>XCOPY "$(TargetPath)" "C:\robocode\robots\" /Y /D</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

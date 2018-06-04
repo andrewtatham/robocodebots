@@ -1,0 +1,121 @@
+﻿<#@ template language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="AndrewTatham.Helpers" #>
+<#@ output extension=".html" #>
+<!DOCTYPE html >
+<html>
+  <head>
+    <title>Scores</title>
+
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script type="text/javascript">
+
+		google.load('visualization', '1', {packages:['corechart', 'table']});
+		google.setOnLoadCallback(drawTables);
+	
+		function drawTables() 
+		{
+
+			var WeeklyTotalChartOptions = {
+			  isStacked: true
+			};
+			var WeeklyTotalChartData = new google.visualization.arrayToDataTable(<#= Scores.WeeklyTotalChart #>);
+			var WeeklyTotalChart = new google.visualization.SteppedAreaChart(document.getElementById('WeeklyTotalChart'));
+			WeeklyTotalChart.draw(WeeklyTotalChartData, WeeklyTotalChartOptions);
+
+			var DailyTotalChartOptions = {
+			  isStacked: true
+			};
+			var DailyTotalChartData = new google.visualization.arrayToDataTable(<#= Scores.DailyTotalChart #>);
+			var DailyTotalChart = new google.visualization.SteppedAreaChart(document.getElementById('DailyTotalChart'));
+			DailyTotalChart.draw(DailyTotalChartData, DailyTotalChartOptions);
+
+		
+			var WeeklyWinRatioChartOptions = {
+				hAxis: { minValue: 0.0, maxValue: 1.0 }
+			};
+			var WeeklyWinRatioChartData = new google.visualization.arrayToDataTable(<#= Scores.WeeklyWinRatioChart #>);
+			var WeeklyWinRatioChart = new google.visualization.LineChart(document.getElementById('WeeklyWinRatioChart'));
+			WeeklyWinRatioChart.draw(WeeklyWinRatioChartData, WeeklyWinRatioChartOptions);
+
+			var DailyWinRatioChartOptions = {
+				hAxis: { minValue: 0.0, maxValue: 1.0 }
+			};
+			var DailyWinRatioChartData = new google.visualization.arrayToDataTable(<#= Scores.DailyWinRatioChart #>);
+			var DailyWinRatioChart = new google.visualization.LineChart(document.getElementById('DailyWinRatioChart'));
+			DailyWinRatioChart.draw(DailyWinRatioChartData, DailyWinRatioChartOptions);
+
+			
+			var WeeklyOneVsOneClassificationChartOptions = {
+			  title: 'OneVsOne',
+			  isStacked: true
+			};
+			var WeeklyOneVsOneClassificationChartData = new google.visualization.arrayToDataTable(<#= Scores.WeeklyOneVsOneClassificationChart #>);
+			var WeeklyOneVsOneClassificationChart = new google.visualization.SteppedAreaChart(document.getElementById('WeeklyOneVsOneClassificationChart'));
+			WeeklyOneVsOneClassificationChart.draw(WeeklyOneVsOneClassificationChartData, WeeklyOneVsOneClassificationChartOptions);
+
+			var WeeklyMeleeClassificationChartOptions = {
+			  title: 'Melee',
+			  isStacked: true
+			};
+			var WeeklyMeleeClassificationChartData = new google.visualization.arrayToDataTable(<#= Scores.WeeklyMeleeClassificationChart #>);
+			var WeeklyMeleeClassificationChart = new google.visualization.SteppedAreaChart(document.getElementById('WeeklyMeleeClassificationChart'));
+			WeeklyMeleeClassificationChart.draw(WeeklyMeleeClassificationChartData, WeeklyMeleeClassificationChartOptions);
+
+			var DailyOneVsOneClassificationChartOptions = {
+			  title: 'OneVsOne',
+			  isStacked: true
+			};
+			var DailyOneVsOneClassificationChartData = new google.visualization.arrayToDataTable(<#= Scores.DailyOneVsOneClassificationChart #>);
+			var DailyOneVsOneClassificationChart = new google.visualization.SteppedAreaChart(document.getElementById('DailyOneVsOneClassificationChart'));
+			DailyOneVsOneClassificationChart.draw(DailyOneVsOneClassificationChartData, DailyOneVsOneClassificationChartOptions);
+
+			var DailyMeleeClassificationChartOptions = {
+			  title: 'Melee',
+			  isStacked: true
+			};
+			var DailyMeleeClassificationChartData = new google.visualization.arrayToDataTable(<#= Scores.DailyMeleeClassificationChart #>);
+			var DailyMeleeClassificationChart = new google.visualization.SteppedAreaChart(document.getElementById('DailyMeleeClassificationChart'));
+			DailyMeleeClassificationChart.draw(DailyMeleeClassificationChartData, DailyMeleeClassificationChartOptions);
+
+
+			var tableData = new google.visualization.arrayToDataTable(<#= Scores.tableData #>);
+		    var table = new google.visualization.Table(document.getElementById('table_div'));
+			table.draw(tableData, {showRowNumber: true});
+
+
+		};
+
+
+    </script>
+  </head>
+
+  <body>
+	  <table>
+		<tr>
+			<td><div id='WeeklyTotalChart'></div></td>
+			<td><div id='DailyTotalChart'></div></td>
+		</tr>
+		<tr>
+			<td><div id='WeeklyWinRatioChart'></div></td>
+			<td><div id='DailyWinRatioChart'></div></td>
+		</tr>
+		<tr>
+			<td><div id='WeeklyOneVsOneClassificationChart'></div></td>
+			<td><div id='DailyOneVsOneClassificationChart'></div></td>
+		</tr>
+		<tr>
+			<td><div id='WeeklyMeleeClassificationChart'></div></td>
+			<td><div id='DailyMeleeClassificationChart'></div></td>
+		</tr>
+		<tr>
+			<td colspan='2'><div id='table_div'></div></td>
+		
+		</tr>
+	  </table>    
+  </body>
+</html>

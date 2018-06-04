@@ -1,0 +1,1 @@
+packages\NAnt.Portable.0.92\NAnt.exe -D:WorkspaceDir="C:\Users\Andrew.Tatham\Documents\Visual Studio 2012\Projects\Robocode" CITest 

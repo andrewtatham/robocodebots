@@ -1,0 +1,2191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FxCopProject Version="10.0" Name="My FxCop Project">
+ <ProjectOptions>
+  <SharedProject>True</SharedProject>
+  <Stylesheet Apply="False">$(FxCopDir)\Xml\FxCopReport.xsl</Stylesheet>
+  <SaveMessages>
+   <Project Status="Active, Excluded, Good, Noise" NewOnly="False" />
+   <Report Status="Active, Good, Noise" NewOnly="False" />
+  </SaveMessages>
+  <ProjectFile Compress="True" DefaultTargetCheck="True" DefaultRuleCheck="True" SaveByRuleGroup="" Deterministic="True" />
+  <EnableMultithreadedLoad>True</EnableMultithreadedLoad>
+  <EnableMultithreadedAnalysis>True</EnableMultithreadedAnalysis>
+  <SourceLookup>True</SourceLookup>
+  <AnalysisExceptionsThreshold>10</AnalysisExceptionsThreshold>
+  <RuleExceptionsThreshold>1</RuleExceptionsThreshold>
+  <Spelling Locale="en-US" />
+  <OverrideRuleVisibilities>False</OverrideRuleVisibilities>
+  <CustomDictionaries SearchFxCopDir="True" SearchUserProfile="True" SearchProjectDir="True" />
+  <SearchGlobalAssemblyCache>False</SearchGlobalAssemblyCache>
+  <DeadlockDetectionTimeout>120</DeadlockDetectionTimeout>
+  <IgnoreGeneratedCode>False</IgnoreGeneratedCode>
+ </ProjectOptions>
+ <Targets>
+  <AssemblyReferenceDirectories>
+   <Directory>$(ProjectDir)/andrewtatham/bin/Release/</Directory>
+   <Directory>$(ProjectDir)/Robocode/bin/Debug/</Directory>
+  </AssemblyReferenceDirectories>
+  <Target Name="$(ProjectDir)/AndrewTatham/bin/Debug/AndrewTatham.dll" Analyze="True" AnalyzeAllChildren="True" />
+ </Targets>
+ <Rules>
+  <RuleFiles>
+   <RuleFile Name="$(FxCopDir)\Rules\DesignRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\GlobalizationRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\InteroperabilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\MobilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\NamingRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\PerformanceRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\PortabilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\SecurityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\SecurityTransparencyRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\UsageRules.dll" Enabled="True" AllRulesEnabled="True" />
+  </RuleFiles>
+  <Groups />
+  <Settings />
+ </Rules>
+ <FxCopReport Version="10.0">
+  <Namespaces>
+   <Namespace Name="AndrewTatham">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Created="2012-06-25 08:22:35Z">
+      <Issue>
+       <Item>AndrewTatham</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="AndrewTatham.Logic">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Created="2012-06-25 08:22:35Z">
+      <Issue>
+       <Item>AndrewTatham.Logic</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="AndrewTatham.Logic.Behaviours">
+    <Messages>
+     <Message Id="Behaviours" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2012-06-25 08:22:35Z">
+      <Issue Name="Namespace">
+       <Item>Behaviours</Item>
+       <Item>AndrewTatham.Logic.Behaviours</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="AndrewTatham.Logic.Behaviours.Strategies">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Created="2013-01-04 09:39:22Z">
+      <Issue>
+       <Item>AndrewTatham.Logic.Behaviours.Strategies</Item>
+      </Issue>
+     </Message>
+     <Message Id="Behaviours" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+      <Issue Name="Namespace">
+       <Item>Behaviours</Item>
+       <Item>AndrewTatham.Logic.Behaviours.Strategies</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="AndrewTatham.Logic.Behaviours.Strategies.Aiming">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Created="2013-01-04 09:39:22Z">
+      <Issue>
+       <Item>AndrewTatham.Logic.Behaviours.Strategies.Aiming</Item>
+      </Issue>
+     </Message>
+     <Message Id="Behaviours" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+      <Issue Name="Namespace">
+       <Item>Behaviours</Item>
+       <Item>AndrewTatham.Logic.Behaviours.Strategies.Aiming</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="AndrewTatham.Logic.Behaviours.Strategies.Aiming.PredictionAlgorithms">
+    <Messages>
+     <Message Id="Behaviours" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-05-16 15:35:11Z">
+      <Issue Name="Namespace">
+       <Item>Behaviours</Item>
+       <Item>AndrewTatham.Logic.Behaviours.Strategies.Aiming.PredictionAlgorithms</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="AndrewTatham.Logic.Behaviours.Strategies.Aiming.PredictionAlgorithms.GuessFactor">
+    <Messages>
+     <Message Id="Behaviours" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-05-16 15:35:11Z">
+      <Issue Name="Namespace">
+       <Item>Behaviours</Item>
+       <Item>AndrewTatham.Logic.Behaviours.Strategies.Aiming.PredictionAlgorithms.GuessFactor</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="AndrewTatham.Logic.Behaviours.Strategies.Movement">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Created="2013-01-04 09:39:22Z">
+      <Issue>
+       <Item>AndrewTatham.Logic.Behaviours.Strategies.Movement</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="AndrewTatham.Logic.Behaviours.Strategies.Movement.Forces">
+    <Messages>
+     <Message Id="Behaviours" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+      <Issue Name="Namespace">
+       <Item>Behaviours</Item>
+       <Item>AndrewTatham.Logic.Behaviours.Strategies.Movement.Forces</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="AndrewTatham.Logic.Behaviours.Strategies.Radar">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Created="2013-01-04 09:39:22Z">
+      <Issue>
+       <Item>AndrewTatham.Logic.Behaviours.Strategies.Radar</Item>
+      </Issue>
+     </Message>
+     <Message Id="Behaviours" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+      <Issue Name="Namespace">
+       <Item>Behaviours</Item>
+       <Item>AndrewTatham.Logic.Behaviours.Strategies.Radar</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="AndrewTatham.Logic.Behaviours.Strategies.Targeting">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Created="2013-01-04 09:39:22Z">
+      <Issue>
+       <Item>AndrewTatham.Logic.Behaviours.Strategies.Targeting</Item>
+      </Issue>
+     </Message>
+     <Message Id="Behaviours" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+      <Issue Name="Namespace">
+       <Item>Behaviours</Item>
+       <Item>AndrewTatham.Logic.Behaviours.Strategies.Targeting</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="AndrewTatham.Logic.Bullets">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Created="2013-01-04 09:39:22Z">
+      <Issue>
+       <Item>AndrewTatham.Logic.Bullets</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+  </Namespaces>
+  <Targets>
+   <Target Name="$(ProjectDir)/AndrewTatham/bin/Debug/AndrewTatham.dll">
+    <Modules>
+     <Module Name="andrewtatham.dll">
+      <Messages>
+       <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Created="2012-06-25 08:22:35Z">
+        <Issue Name="NoStrongName">
+         <Item>'AndrewTatham.dll'</Item>
+        </Issue>
+       </Message>
+       <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Created="2012-06-25 08:22:35Z">
+        <Issue>
+         <Item>'AndrewTatham.dll'</Item>
+        </Issue>
+       </Message>
+      </Messages>
+      <Namespaces>
+       <Namespace Name="AndrewTatham">
+        <Types>
+         <Type Name="BaseAdvancedRobot">
+          <Messages>
+           <Message TypeName="AbstractTypesShouldNotHaveConstructors" Category="Microsoft.Design" CheckId="CA1012" Created="2013-05-16 15:35:11Z">
+            <Issue>
+             <Item>'BaseAdvancedRobot'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#.ctor(System.Collections.Generic.IEnumerable`1&lt;AndrewTatham.Logic.Behaviours.BaseBehaviour&gt;)">
+            <Messages>
+             <Message Id="behaviours" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-05-16 15:35:11Z">
+              <Issue Name="MemberParameter">
+               <Item>'BaseAdvancedRobot.BaseAdvancedRobot(IEnumerable&lt;BaseBehaviour&gt;)'</Item>
+               <Item>behaviours</Item>
+               <Item>'behaviours'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#_brain">
+            <Messages>
+             <Message TypeName="DoNotDeclareReadOnlyMutableReferenceTypes" Category="Microsoft.Security" CheckId="CA2104" Created="2013-05-16 15:35:11Z">
+              <Issue>
+               <Item>'BaseAdvancedRobot._brain'</Item>
+               <Item>'IBrain'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2013-05-16 15:35:11Z">
+              <Issue>
+               <Item>'BaseAdvancedRobot._brain'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="IMyAdvancedRobot">
+          <Members>
+           <Member Name="#BattleFieldHeight">
+            <Messages>
+             <Message Id="BattleField" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberShouldBeDiscreteTerm">
+               <Item>BattleField</Item>
+               <Item>'IMyAdvancedRobot.BattleFieldHeight'</Item>
+               <Item>Battlefield</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#BattleFieldWidth">
+            <Messages>
+             <Message Id="BattleField" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberShouldBeDiscreteTerm">
+               <Item>BattleField</Item>
+               <Item>'IMyAdvancedRobot.BattleFieldWidth'</Item>
+               <Item>Battlefield</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Fire(System.Double)">
+            <Messages>
+             <Message TypeName="UseEventsWhereAppropriate" Category="Microsoft.Design" CheckId="CA1030" Created="2013-01-04 09:39:22Z">
+              <Issue>
+               <Item>'IMyAdvancedRobot.Fire(double)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#FireBullet(System.Double)">
+            <Messages>
+             <Message TypeName="UseEventsWhereAppropriate" Category="Microsoft.Design" CheckId="CA1030" Created="2013-01-04 09:39:22Z">
+              <Issue>
+               <Item>'IMyAdvancedRobot.FireBullet(double)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetAllEvents()">
+            <Messages>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Created="2013-01-04 09:39:22Z">
+              <Issue Certainty="50">
+               <Item>'IMyAdvancedRobot.GetAllEvents()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetBulletHitBulletEvents()">
+            <Messages>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Created="2013-01-04 09:39:22Z">
+              <Issue Certainty="50">
+               <Item>'IMyAdvancedRobot.GetBulletHitBulletEvents()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetBulletHitEvents()">
+            <Messages>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Created="2013-01-04 09:39:22Z">
+              <Issue Certainty="50">
+               <Item>'IMyAdvancedRobot.GetBulletHitEvents()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetBulletMissedEvents()">
+            <Messages>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Created="2013-01-04 09:39:22Z">
+              <Issue Certainty="50">
+               <Item>'IMyAdvancedRobot.GetBulletMissedEvents()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetDataDirectory()">
+            <Messages>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Created="2013-01-04 09:39:22Z">
+              <Issue Certainty="50">
+               <Item>'IMyAdvancedRobot.GetDataDirectory()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetDataFile(System.String)">
+            <Messages>
+             <Message Id="filename" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberParameterShouldBeCompoundWord">
+               <Item>'IMyAdvancedRobot.GetDataFile(string)'</Item>
+               <Item>filename</Item>
+               <Item>'filename'</Item>
+               <Item>fileName</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetHitByBulletEvents()">
+            <Messages>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Created="2013-01-04 09:39:22Z">
+              <Issue Certainty="50">
+               <Item>'IMyAdvancedRobot.GetHitByBulletEvents()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetHitRobotEvents()">
+            <Messages>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Created="2013-01-04 09:39:22Z">
+              <Issue Certainty="50">
+               <Item>'IMyAdvancedRobot.GetHitRobotEvents()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetHitWallEvents()">
+            <Messages>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Created="2013-01-04 09:39:22Z">
+              <Issue Certainty="50">
+               <Item>'IMyAdvancedRobot.GetHitWallEvents()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetRobotDeathEvents()">
+            <Messages>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Created="2013-01-04 09:39:22Z">
+              <Issue Certainty="50">
+               <Item>'IMyAdvancedRobot.GetRobotDeathEvents()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetScannedRobotEvents()">
+            <Messages>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Created="2013-01-04 09:39:22Z">
+              <Issue Certainty="50">
+               <Item>'IMyAdvancedRobot.GetScannedRobotEvents()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetStatusEvents()">
+            <Messages>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Created="2013-01-04 09:39:22Z">
+              <Issue Certainty="50">
+               <Item>'IMyAdvancedRobot.GetStatusEvents()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#IsInterruptible">
+            <Messages>
+             <Message TypeName="PropertiesShouldNotBeWriteOnly" Category="Microsoft.Design" CheckId="CA1044" Created="2013-01-04 09:39:22Z">
+              <Issue Name="AddGetter">
+               <Item>'IMyAdvancedRobot.IsInterruptible'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#MaxTurnRate">
+            <Messages>
+             <Message TypeName="PropertiesShouldNotBeWriteOnly" Category="Microsoft.Design" CheckId="CA1044" Created="2013-01-04 09:39:22Z">
+              <Issue Name="AddGetter">
+               <Item>'IMyAdvancedRobot.MaxTurnRate'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#MaxVelocity">
+            <Messages>
+             <Message TypeName="PropertiesShouldNotBeWriteOnly" Category="Microsoft.Design" CheckId="CA1044" Created="2013-01-04 09:39:22Z">
+              <Issue Name="AddGetter">
+               <Item>'IMyAdvancedRobot.MaxVelocity'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#NumRounds">
+            <Messages>
+             <Message Id="Num" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="Member">
+               <Item>Num</Item>
+               <Item>'IMyAdvancedRobot.NumRounds'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#OnBattleEnded(Robocode.BattleEndedEvent)">
+            <Messages>
+             <Message Id="evnt" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberParameter">
+               <Item>'IMyAdvancedRobot.OnBattleEnded(BattleEndedEvent)'</Item>
+               <Item>evnt</Item>
+               <Item>'evnt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#OnBulletHit(Robocode.BulletHitEvent)">
+            <Messages>
+             <Message Id="evnt" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2012-06-25 08:22:35Z">
+              <Issue Name="MemberParameter">
+               <Item>'IMyAdvancedRobot.OnBulletHit(BulletHitEvent)'</Item>
+               <Item>evnt</Item>
+               <Item>'evnt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#OnBulletHitBullet(Robocode.BulletHitBulletEvent)">
+            <Messages>
+             <Message Id="evnt" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2012-06-25 08:22:35Z">
+              <Issue Name="MemberParameter">
+               <Item>'IMyAdvancedRobot.OnBulletHitBullet(BulletHitBulletEvent)'</Item>
+               <Item>evnt</Item>
+               <Item>'evnt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#OnBulletMissed(Robocode.BulletMissedEvent)">
+            <Messages>
+             <Message Id="evnt" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2012-06-25 08:22:35Z">
+              <Issue Name="MemberParameter">
+               <Item>'IMyAdvancedRobot.OnBulletMissed(BulletMissedEvent)'</Item>
+               <Item>evnt</Item>
+               <Item>'evnt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#OnCustomEvent(Robocode.CustomEvent)">
+            <Messages>
+             <Message Id="evnt" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberParameter">
+               <Item>'IMyAdvancedRobot.OnCustomEvent(CustomEvent)'</Item>
+               <Item>evnt</Item>
+               <Item>'evnt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#OnDeath(Robocode.DeathEvent)">
+            <Messages>
+             <Message Id="evnt" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberParameter">
+               <Item>'IMyAdvancedRobot.OnDeath(DeathEvent)'</Item>
+               <Item>evnt</Item>
+               <Item>'evnt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#OnHitByBullet(Robocode.HitByBulletEvent)">
+            <Messages>
+             <Message Id="evnt" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2012-06-25 08:22:35Z">
+              <Issue Name="MemberParameter">
+               <Item>'IMyAdvancedRobot.OnHitByBullet(HitByBulletEvent)'</Item>
+               <Item>evnt</Item>
+               <Item>'evnt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#OnHitRobot(Robocode.HitRobotEvent)">
+            <Messages>
+             <Message Id="evnt" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberParameter">
+               <Item>'IMyAdvancedRobot.OnHitRobot(HitRobotEvent)'</Item>
+               <Item>evnt</Item>
+               <Item>'evnt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#OnHitWall(Robocode.HitWallEvent)">
+            <Messages>
+             <Message Id="evnt" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberParameter">
+               <Item>'IMyAdvancedRobot.OnHitWall(HitWallEvent)'</Item>
+               <Item>evnt</Item>
+               <Item>'evnt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#OnKeyPressed(Robocode.KeyEvent)">
+            <Messages>
+             <Message Id="e" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberParameterMoreMeaningfulName">
+               <Item>'IMyAdvancedRobot.OnKeyPressed(KeyEvent)'</Item>
+               <Item>'e'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#OnKeyReleased(Robocode.KeyEvent)">
+            <Messages>
+             <Message Id="e" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberParameterMoreMeaningfulName">
+               <Item>'IMyAdvancedRobot.OnKeyReleased(KeyEvent)'</Item>
+               <Item>'e'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#OnKeyTyped(Robocode.KeyEvent)">
+            <Messages>
+             <Message Id="e" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberParameterMoreMeaningfulName">
+               <Item>'IMyAdvancedRobot.OnKeyTyped(KeyEvent)'</Item>
+               <Item>'e'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#OnMouseClicked(Robocode.MouseEvent)">
+            <Messages>
+             <Message Id="e" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberParameterMoreMeaningfulName">
+               <Item>'IMyAdvancedRobot.OnMouseClicked(MouseEvent)'</Item>
+               <Item>'e'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#OnMouseDragged(Robocode.MouseEvent)">
+            <Messages>
+             <Message Id="e" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberParameterMoreMeaningfulName">
+               <Item>'IMyAdvancedRobot.OnMouseDragged(MouseEvent)'</Item>
+               <Item>'e'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#OnMouseEntered(Robocode.MouseEvent)">
+            <Messages>
+             <Message Id="e" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberParameterMoreMeaningfulName">
+               <Item>'IMyAdvancedRobot.OnMouseEntered(MouseEvent)'</Item>
+               <Item>'e'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#OnMouseExited(Robocode.MouseEvent)">
+            <Messages>
+             <Message Id="e" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberParameterMoreMeaningfulName">
+               <Item>'IMyAdvancedRobot.OnMouseExited(MouseEvent)'</Item>
+               <Item>'e'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#OnMouseMoved(Robocode.MouseEvent)">
+            <Messages>
+             <Message Id="e" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberParameterMoreMeaningfulName">
+               <Item>'IMyAdvancedRobot.OnMouseMoved(MouseEvent)'</Item>
+               <Item>'e'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#OnMousePressed(Robocode.MouseEvent)">
+            <Messages>
+             <Message Id="e" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberParameterMoreMeaningfulName">
+               <Item>'IMyAdvancedRobot.OnMousePressed(MouseEvent)'</Item>
+               <Item>'e'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#OnMouseReleased(Robocode.MouseEvent)">
+            <Messages>
+             <Message Id="e" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberParameterMoreMeaningfulName">
+               <Item>'IMyAdvancedRobot.OnMouseReleased(MouseEvent)'</Item>
+               <Item>'e'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#OnMouseWheelMoved(Robocode.MouseWheelMovedEvent)">
+            <Messages>
+             <Message Id="e" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberParameterMoreMeaningfulName">
+               <Item>'IMyAdvancedRobot.OnMouseWheelMoved(MouseWheelMovedEvent)'</Item>
+               <Item>'e'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#OnRobotDeath(Robocode.RobotDeathEvent)">
+            <Messages>
+             <Message Id="evnt" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2012-06-25 08:22:35Z">
+              <Issue Name="MemberParameter">
+               <Item>'IMyAdvancedRobot.OnRobotDeath(RobotDeathEvent)'</Item>
+               <Item>evnt</Item>
+               <Item>'evnt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#OnRoundEnded(Robocode.RoundEndedEvent)">
+            <Messages>
+             <Message Id="evnt" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2012-06-25 08:22:35Z">
+              <Issue Name="MemberParameter">
+               <Item>'IMyAdvancedRobot.OnRoundEnded(RoundEndedEvent)'</Item>
+               <Item>evnt</Item>
+               <Item>'evnt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#OnScannedRobot(Robocode.ScannedRobotEvent)">
+            <Messages>
+             <Message Id="evnt" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2012-06-25 08:22:35Z">
+              <Issue Name="MemberParameter">
+               <Item>'IMyAdvancedRobot.OnScannedRobot(ScannedRobotEvent)'</Item>
+               <Item>evnt</Item>
+               <Item>'evnt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#OnSkippedTurn(Robocode.SkippedTurnEvent)">
+            <Messages>
+             <Message Id="evnt" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberParameter">
+               <Item>'IMyAdvancedRobot.OnSkippedTurn(SkippedTurnEvent)'</Item>
+               <Item>evnt</Item>
+               <Item>'evnt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#OnStatus(Robocode.StatusEvent)">
+            <Messages>
+             <Message Id="e" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberParameterMoreMeaningfulName">
+               <Item>'IMyAdvancedRobot.OnStatus(StatusEvent)'</Item>
+               <Item>'e'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#OnWin(Robocode.WinEvent)">
+            <Messages>
+             <Message Id="evnt" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberParameter">
+               <Item>'IMyAdvancedRobot.OnWin(WinEvent)'</Item>
+               <Item>evnt</Item>
+               <Item>'evnt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Resume()">
+            <Messages>
+             <Message Id="Resume" TypeName="IdentifiersShouldNotMatchKeywords" Category="Microsoft.Naming" CheckId="CA1716" Created="2013-01-04 09:39:22Z">
+              <Issue Name="Member">
+               <Item>'IMyAdvancedRobot.Resume()'</Item>
+               <Item>Resume</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#RoundNum">
+            <Messages>
+             <Message Id="Num" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="Member">
+               <Item>Num</Item>
+               <Item>'IMyAdvancedRobot.RoundNum'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#SetBack(System.Double)">
+            <Messages>
+             <Message Id="SetBack" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberShouldBeDiscreteTerm">
+               <Item>SetBack</Item>
+               <Item>'IMyAdvancedRobot.SetBack(double)'</Item>
+               <Item>Setback</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Stop()">
+            <Messages>
+             <Message Id="Stop" TypeName="IdentifiersShouldNotMatchKeywords" Category="Microsoft.Naming" CheckId="CA1716" Created="2013-01-04 09:39:22Z">
+              <Issue Name="Member">
+               <Item>'IMyAdvancedRobot.Stop()'</Item>
+               <Item>Stop</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Stop(System.Boolean)">
+            <Messages>
+             <Message Id="Stop" TypeName="IdentifiersShouldNotMatchKeywords" Category="Microsoft.Naming" CheckId="CA1716" Created="2013-01-04 09:39:22Z">
+              <Issue Name="Member">
+               <Item>'IMyAdvancedRobot.Stop(bool)'</Item>
+               <Item>Stop</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="AndrewTatham.Helpers">
+        <Types>
+         <Type Name="Angle">
+          <Members>
+           <Member Name="#op_Addition(AndrewTatham.Helpers.Angle,AndrewTatham.Helpers.Angle)">
+            <Messages>
+             <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Created="2012-06-25 08:22:35Z">
+              <Issue>
+               <Item>Add</Item>
+               <Item>'Angle.operator +(Angle, Angle)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#op_Equality(AndrewTatham.Helpers.Angle,AndrewTatham.Helpers.Angle)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2013-01-04 09:39:22Z">
+              <Issue>
+               <Item>'Angle.operator ==(Angle, Angle)'</Item>
+               <Item>'object'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#op_Inequality(AndrewTatham.Helpers.Angle,AndrewTatham.Helpers.Angle)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2013-01-04 09:39:22Z">
+              <Issue>
+               <Item>'Angle.operator !=(Angle, Angle)'</Item>
+               <Item>'object'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#op_Subtraction(AndrewTatham.Helpers.Angle,AndrewTatham.Helpers.Angle)">
+            <Messages>
+             <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Created="2012-06-25 08:22:35Z">
+              <Issue>
+               <Item>Subtract</Item>
+               <Item>'Angle.operator -(Angle, Angle)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ColourPallette">
+          <Messages>
+           <Message Id="Colour" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+            <Issue Name="Type">
+             <Item>Colour</Item>
+             <Item>'ColourPallette'</Item>
+            </Issue>
+           </Message>
+           <Message Id="Pallette" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+            <Issue Name="Type">
+             <Item>Pallette</Item>
+             <Item>'ColourPallette'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#AimColour">
+            <Messages>
+             <Message Id="Colour" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="Member">
+               <Item>Colour</Item>
+               <Item>'ColourPallette.AimColour'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Created="2013-05-16 15:55:31Z">
+              <Issue>
+               <Item>'ColourPallette.AimColour'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#AimPen">
+            <Messages>
+             <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Created="2013-05-16 15:55:31Z">
+              <Issue>
+               <Item>'ColourPallette.AimPen'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#AntiGravityMovementColour">
+            <Messages>
+             <Message Id="AntiGravity" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberShouldBeDiscreteTerm">
+               <Item>AntiGravity</Item>
+               <Item>'ColourPallette.AntiGravityMovementColour'</Item>
+               <Item>Antigravity</Item>
+              </Issue>
+             </Message>
+             <Message Id="Colour" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="Member">
+               <Item>Colour</Item>
+               <Item>'ColourPallette.AntiGravityMovementColour'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Created="2013-05-16 15:55:31Z">
+              <Issue>
+               <Item>'ColourPallette.AntiGravityMovementColour'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#AntiGravityMovementPen">
+            <Messages>
+             <Message Id="AntiGravity" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberShouldBeDiscreteTerm">
+               <Item>AntiGravity</Item>
+               <Item>'ColourPallette.AntiGravityMovementPen'</Item>
+               <Item>Antigravity</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Created="2013-05-16 15:55:31Z">
+              <Issue>
+               <Item>'ColourPallette.AntiGravityMovementPen'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#BlipColour">
+            <Messages>
+             <Message Id="Colour" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="Member">
+               <Item>Colour</Item>
+               <Item>'ColourPallette.BlipColour'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Created="2013-05-16 15:55:31Z">
+              <Issue>
+               <Item>'ColourPallette.BlipColour'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#BlipPen">
+            <Messages>
+             <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Created="2013-05-16 15:55:31Z">
+              <Issue>
+               <Item>'ColourPallette.BlipPen'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#EnemyColour">
+            <Messages>
+             <Message Id="Colour" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="Member">
+               <Item>Colour</Item>
+               <Item>'ColourPallette.EnemyColour'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Created="2013-05-16 15:55:31Z">
+              <Issue>
+               <Item>'ColourPallette.EnemyColour'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#EnemyPen">
+            <Messages>
+             <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Created="2013-05-16 15:55:31Z">
+              <Issue>
+               <Item>'ColourPallette.EnemyPen'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GuessFactorBrush">
+            <Messages>
+             <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Created="2013-05-16 15:55:31Z">
+              <Issue>
+               <Item>'ColourPallette.GuessFactorBrush'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GuessFactorColour">
+            <Messages>
+             <Message Id="Colour" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="Member">
+               <Item>Colour</Item>
+               <Item>'ColourPallette.GuessFactorColour'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Created="2013-05-16 15:55:31Z">
+              <Issue>
+               <Item>'ColourPallette.GuessFactorColour'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GuessFactorPen">
+            <Messages>
+             <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Created="2013-05-16 15:55:31Z">
+              <Issue>
+               <Item>'ColourPallette.GuessFactorPen'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#LocationHistoryColour">
+            <Messages>
+             <Message Id="Colour" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="Member">
+               <Item>Colour</Item>
+               <Item>'ColourPallette.LocationHistoryColour'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Created="2013-05-16 15:55:31Z">
+              <Issue>
+               <Item>'ColourPallette.LocationHistoryColour'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#LocationHistoryPen">
+            <Messages>
+             <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Created="2013-05-16 15:55:31Z">
+              <Issue>
+               <Item>'ColourPallette.LocationHistoryPen'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#MovementColour">
+            <Messages>
+             <Message Id="Colour" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="Member">
+               <Item>Colour</Item>
+               <Item>'ColourPallette.MovementColour'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Created="2013-05-16 15:55:31Z">
+              <Issue>
+               <Item>'ColourPallette.MovementColour'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#MovementPen">
+            <Messages>
+             <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Created="2013-05-16 15:55:31Z">
+              <Issue>
+               <Item>'ColourPallette.MovementPen'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#RadarPen">
+            <Messages>
+             <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Created="2013-05-16 15:55:31Z">
+              <Issue>
+               <Item>'ColourPallette.RadarPen'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#VirtualBulletColour">
+            <Messages>
+             <Message Id="Colour" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="Member">
+               <Item>Colour</Item>
+               <Item>'ColourPallette.VirtualBulletColour'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Created="2013-05-16 15:55:31Z">
+              <Issue>
+               <Item>'ColourPallette.VirtualBulletColour'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#VirtualBulletPen">
+            <Messages>
+             <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Created="2013-05-16 15:55:31Z">
+              <Issue>
+               <Item>'ColourPallette.VirtualBulletPen'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#WaveColour">
+            <Messages>
+             <Message Id="Colour" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="Member">
+               <Item>Colour</Item>
+               <Item>'ColourPallette.WaveColour'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Created="2013-05-16 15:55:31Z">
+              <Issue>
+               <Item>'ColourPallette.WaveColour'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#WavePen">
+            <Messages>
+             <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Created="2013-05-16 15:55:31Z">
+              <Issue>
+               <Item>'ColourPallette.WavePen'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#WaveSurfingMovementBrush">
+            <Messages>
+             <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Created="2013-05-16 15:55:31Z">
+              <Issue>
+               <Item>'ColourPallette.WaveSurfingMovementBrush'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#WaveSurfingMovementColour">
+            <Messages>
+             <Message Id="Colour" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="Member">
+               <Item>Colour</Item>
+               <Item>'ColourPallette.WaveSurfingMovementColour'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Created="2013-05-16 15:55:31Z">
+              <Issue>
+               <Item>'ColourPallette.WaveSurfingMovementColour'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#WaveSurfingMovementPen">
+            <Messages>
+             <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Created="2013-05-16 15:55:31Z">
+              <Issue>
+               <Item>'ColourPallette.WaveSurfingMovementPen'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ExtensionMethods">
+          <Members>
+           <Member Name="#EveryOneIn`1(System.Collections.Generic.IEnumerable`1&lt;!!0&gt;,System.Int32)">
+            <Messages>
+             <Message Id="EveryOne" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberShouldBeDiscreteTerm">
+               <Item>EveryOne</Item>
+               <Item>'ExtensionMethods.EveryOneIn&lt;T&gt;(this IEnumerable&lt;T&gt;, int)'</Item>
+               <Item>Everyone</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#First`1(System.Collections.Generic.List`1&lt;!!0&gt;,System.Int32)">
+            <Messages>
+             <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Created="2012-06-25 08:22:35Z">
+              <Issue>
+               <Item>'List&lt;T&gt;'</Item>
+               <Item>'ExtensionMethods.First&lt;T&gt;(this List&lt;T&gt;, int)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'List&lt;T&gt;'</Item>
+               <Item>'ExtensionMethods.First&lt;T&gt;(this List&lt;T&gt;, int)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Last`1(System.Collections.Generic.List`1&lt;!!0&gt;,System.Int32)">
+            <Messages>
+             <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Created="2012-06-25 08:22:35Z">
+              <Issue>
+               <Item>'List&lt;T&gt;'</Item>
+               <Item>'ExtensionMethods.Last&lt;T&gt;(this List&lt;T&gt;, int)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'List&lt;T&gt;'</Item>
+               <Item>'ExtensionMethods.Last&lt;T&gt;(this List&lt;T&gt;, int)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Render(AndrewTatham.Helpers.Vector,Robocode.IGraphics,System.Drawing.Color)">
+            <Messages>
+             <Message Id="colour" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberParameter">
+               <Item>'ExtensionMethods.Render(this Vector, IGraphics, Color)'</Item>
+               <Item>colour</Item>
+               <Item>'colour'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Render(System.Collections.Generic.IEnumerable`1&lt;AndrewTatham.Helpers.Vector&gt;,Robocode.IGraphics,System.Drawing.Color)">
+            <Messages>
+             <Message TypeName="ProvideObsoleteAttributeMessage" Category="Microsoft.Design" CheckId="CA1041" Created="2013-01-04 09:39:22Z">
+              <Issue>
+               <Item>'ExtensionMethods.Render(this IEnumerable&lt;Vector&gt;, IGraphics, Color)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="RandomHelper">
+          <Members>
+           <Member Name="#NextInt(System.Int32)">
+            <Messages>
+             <Message Id="int" TypeName="IdentifiersShouldNotContainTypeNames" Category="Microsoft.Naming" CheckId="CA1720" Created="2013-01-04 09:39:22Z">
+              <Issue Name="LanguageSpecificMember">
+               <Item>Int</Item>
+               <Item>'RandomHelper.NextInt(int)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#NextInt(System.Int32,System.Int32)">
+            <Messages>
+             <Message Id="int" TypeName="IdentifiersShouldNotContainTypeNames" Category="Microsoft.Naming" CheckId="CA1720" Created="2012-06-25 08:22:35Z">
+              <Issue Name="LanguageSpecificMember">
+               <Item>Int</Item>
+               <Item>'RandomHelper.NextInt(int, int)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="Vector">
+          <Members>
+           <Member Name="#GetRandom(System.Int32,System.Double,System.Double)">
+            <Messages>
+             <Message Id="maxy" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberParameter">
+               <Item>'Vector.GetRandom(int, double, double)'</Item>
+               <Item>maxy</Item>
+               <Item>'maxy'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#op_Addition(AndrewTatham.Helpers.Vector,AndrewTatham.Helpers.Vector)">
+            <Messages>
+             <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Created="2012-06-25 08:22:35Z">
+              <Issue>
+               <Item>Add</Item>
+               <Item>'Vector.operator +(Vector, Vector)'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="OverloadOperatorEqualsOnOverloadingAddAndSubtract" Category="Microsoft.Design" CheckId="CA1013" Created="2012-06-25 08:22:35Z">
+              <Issue>
+               <Item>'Vector'</Item>
+               <Item>'Vector.operator +(Vector, Vector)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#op_Division(AndrewTatham.Helpers.Vector,System.Double)">
+            <Messages>
+             <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Created="2012-06-25 08:22:35Z">
+              <Issue>
+               <Item>Divide</Item>
+               <Item>'Vector.operator /(Vector, double)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#op_Multiply(AndrewTatham.Helpers.Vector,System.Double)">
+            <Messages>
+             <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Created="2012-06-25 08:22:35Z">
+              <Issue>
+               <Item>Multiply</Item>
+               <Item>'Vector.operator *(Vector, double)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#op_Multiply(System.Double,AndrewTatham.Helpers.Vector)">
+            <Messages>
+             <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Created="2012-06-25 08:22:35Z">
+              <Issue>
+               <Item>Multiply</Item>
+               <Item>'Vector.operator *(double, Vector)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#op_Subtraction(AndrewTatham.Helpers.Vector,AndrewTatham.Helpers.Vector)">
+            <Messages>
+             <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Created="2012-06-25 08:22:35Z">
+              <Issue>
+               <Item>Subtract</Item>
+               <Item>'Vector.operator -(Vector, Vector)'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="OverloadOperatorEqualsOnOverloadingAddAndSubtract" Category="Microsoft.Design" CheckId="CA1013" Created="2012-06-25 08:22:35Z">
+              <Issue>
+               <Item>'Vector'</Item>
+               <Item>'Vector.operator -(Vector, Vector)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ToString()">
+            <Messages>
+             <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2013-01-04 09:39:22Z">
+              <Issue Name="IFormatProviderAlternateString">
+               <Item>'string.Format(string, object, object)'</Item>
+               <Item>'Vector.ToString()'</Item>
+               <Item>'string.Format(IFormatProvider, string, params object[])'</Item>
+               <Item>'CultureInfo.CurrentCulture'</Item>
+               <Item>'CultureInfo.InvariantCulture'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="AndrewTatham.Logic">
+        <Types>
+         <Type Name="Brain">
+          <Members>
+           <Member Name="#.ctor(AndrewTatham.BaseAdvancedRobot,System.Collections.Generic.IEnumerable`1&lt;AndrewTatham.Logic.Behaviours.BaseBehaviour&gt;,AndrewTatham.Logic.IContext)">
+            <Messages>
+             <Message Id="behaviours" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-05-16 15:35:11Z">
+              <Issue Name="MemberParameter">
+               <Item>'Brain.Brain(BaseAdvancedRobot, IEnumerable&lt;BaseBehaviour&gt;, IContext)'</Item>
+               <Item>behaviours</Item>
+               <Item>'behaviours'</Item>
+              </Issue>
+             </Message>
+             <Message Id="bot" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-05-16 15:35:11Z">
+              <Issue Name="MemberParameter">
+               <Item>'Brain.Brain(BaseAdvancedRobot, IEnumerable&lt;BaseBehaviour&gt;, IContext)'</Item>
+               <Item>bot</Item>
+               <Item>'bot'</Item>
+              </Issue>
+             </Message>
+             <Message Id="i" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-05-16 15:35:11Z">
+              <Issue Name="MemberParameter">
+               <Item>'Brain.Brain(BaseAdvancedRobot, IEnumerable&lt;BaseBehaviour&gt;, IContext)'</Item>
+               <Item>i</Item>
+               <Item>'iContext'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="Context">
+          <Members>
+           <Member Name="#.ctor(AndrewTatham.BaseAdvancedRobot)">
+            <Messages>
+             <Message Id="bot" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-05-16 15:35:11Z">
+              <Issue Name="MemberParameter">
+               <Item>'Context.Context(BaseAdvancedRobot)'</Item>
+               <Item>bot</Item>
+               <Item>'bot'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="IBrain">
+          <Members>
+           <Member Name="#OnBulletHitBullet(Robocode.BulletHitBulletEvent)">
+            <Messages>
+             <Message Id="evnt" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberParameter">
+               <Item>'IBrain.OnBulletHitBullet(BulletHitBulletEvent)'</Item>
+               <Item>evnt</Item>
+               <Item>'evnt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#OnHitByBullet(Robocode.HitByBulletEvent)">
+            <Messages>
+             <Message Id="evnt" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberParameter">
+               <Item>'IBrain.OnHitByBullet(HitByBulletEvent)'</Item>
+               <Item>evnt</Item>
+               <Item>'evnt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#OnRobotDeath(Robocode.RobotDeathEvent)">
+            <Messages>
+             <Message Id="evnt" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberParameter">
+               <Item>'IBrain.OnRobotDeath(RobotDeathEvent)'</Item>
+               <Item>evnt</Item>
+               <Item>'evnt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#OnScannedRobot(Robocode.ScannedRobotEvent)">
+            <Messages>
+             <Message Id="evnt" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberParameter">
+               <Item>'IBrain.OnScannedRobot(ScannedRobotEvent)'</Item>
+               <Item>evnt</Item>
+               <Item>'evnt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#OnSkippedTurn(Robocode.SkippedTurnEvent)">
+            <Messages>
+             <Message Id="evnt" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberParameter">
+               <Item>'IBrain.OnSkippedTurn(SkippedTurnEvent)'</Item>
+               <Item>evnt</Item>
+               <Item>'evnt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="IContext">
+          <Members>
+           <Member Name="#BattlefieldDiag">
+            <Messages>
+             <Message Id="Diag" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-05-16 15:55:31Z">
+              <Issue Name="Member">
+               <Item>Diag</Item>
+               <Item>'IContext.BattlefieldDiag'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#OnScannedRobot(Robocode.ScannedRobotEvent,AndrewTatham.Logic.Enemies.IEnemy&amp;)">
+            <Messages>
+             <Message Id="1#" TypeName="AvoidOutParameters" Category="Microsoft.Design" CheckId="CA1021" Created="2013-05-16 15:35:11Z">
+              <Issue>
+               <Item>'scannedEnemy'</Item>
+              </Issue>
+             </Message>
+             <Message Id="evnt" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-05-16 15:35:11Z">
+              <Issue Name="MemberParameter">
+               <Item>'IContext.OnScannedRobot(ScannedRobotEvent, out IEnemy)'</Item>
+               <Item>evnt</Item>
+               <Item>'evnt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="AndrewTatham.Logic.Behaviours">
+        <Types>
+         <Type Name="BaseBehaviour">
+          <Messages>
+           <Message Id="Behaviour" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2012-06-25 08:22:35Z">
+            <Issue Name="Type">
+             <Item>Behaviour</Item>
+             <Item>'BaseBehaviour'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#Out">
+            <Messages>
+             <Message TypeName="PropertiesShouldNotBeWriteOnly" Category="Microsoft.Design" CheckId="CA1044" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MakeMoreAccessible">
+               <Item>'BaseBehaviour.Out'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Strategies">
+            <Messages>
+             <Message TypeName="DoNotDeclareReadOnlyMutableReferenceTypes" Category="Microsoft.Security" CheckId="CA2104" Created="2013-01-04 09:39:22Z">
+              <Issue>
+               <Item>'BaseBehaviour.Strategies'</Item>
+               <Item>'List&lt;BaseStrategy&gt;'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2013-01-04 09:39:22Z">
+              <Issue>
+               <Item>'BaseBehaviour.Strategies'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Created="2013-01-04 09:39:22Z">
+              <Issue>
+               <Item>'List&lt;BaseStrategy&gt;'</Item>
+               <Item>'BaseBehaviour.Strategies'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="MeleeBehaviour">
+          <Messages>
+           <Message Id="Behaviour" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2012-06-25 08:22:35Z">
+            <Issue Name="Type">
+             <Item>Behaviour</Item>
+             <Item>'MeleeBehaviour'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="OneVsOneBehaviour">
+          <Messages>
+           <Message Id="Vs" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2012-06-25 08:22:35Z">
+            <Issue Name="Type">
+             <Item>Vs</Item>
+             <Item>'OneVsOneBehaviour'</Item>
+             <Item>VS</Item>
+            </Issue>
+           </Message>
+           <Message Id="Behaviour" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2012-06-25 08:22:35Z">
+            <Issue Name="Type">
+             <Item>Behaviour</Item>
+             <Item>'OneVsOneBehaviour'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="SearchBehaviour">
+          <Messages>
+           <Message Id="Behaviour" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2012-06-25 08:22:35Z">
+            <Issue Name="Type">
+             <Item>Behaviour</Item>
+             <Item>'SearchBehaviour'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="TargetBehaviour">
+          <Messages>
+           <Message Id="Behaviour" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-05-16 15:35:11Z">
+            <Issue Name="Type">
+             <Item>Behaviour</Item>
+             <Item>'TargetBehaviour'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="VictoryBehaviour">
+          <Messages>
+           <Message Id="Behaviour" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2012-06-25 08:22:35Z">
+            <Issue Name="Type">
+             <Item>Behaviour</Item>
+             <Item>'VictoryBehaviour'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="AndrewTatham.Logic.Behaviours.Strategies.Aiming">
+        <Types>
+         <Type Name="PredictionAlgorithmCollection">
+          <Messages>
+           <Message TypeName="IdentifiersShouldNotHaveIncorrectSuffix" Category="Microsoft.Naming" CheckId="CA1711" Created="2013-05-16 15:35:11Z">
+            <Issue Name="TypeNoAlternate">
+             <Item>'PredictionAlgorithmCollection'</Item>
+             <Item>Collection</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#.ctor(System.Collections.Generic.IEnumerable`1&lt;AndrewTatham.Logic.Behaviours.Strategies.Aiming.PredictionAlgorithms.PredictionAlgorithm&gt;)">
+            <Messages>
+             <Message Id="algo" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-05-16 15:35:11Z">
+              <Issue Name="MemberParameter">
+               <Item>'PredictionAlgorithmCollection.PredictionAlgorithmCollection(IEnumerable&lt;PredictionAlgorithm&gt;)'</Item>
+               <Item>algo</Item>
+               <Item>'algo'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="AndrewTatham.Logic.Behaviours.Strategies.Aiming.PredictionAlgorithms">
+        <Types>
+         <Type Name="AveragePosition">
+          <Members>
+           <Member Name="#GetFuturePosition(AndrewTatham.Logic.IContext,System.Int64,AndrewTatham.Logic.Enemies.IEnemy)">
+            <Messages>
+             <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Created="2013-05-16 15:35:11Z">
+              <Issue>
+               <Item>'AveragePosition.GetFuturePosition(IContext, long, IEnemy)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="AverageVelocity">
+          <Messages>
+           <Message TypeName="ProvideObsoleteAttributeMessage" Category="Microsoft.Design" CheckId="CA1041" Created="2013-05-16 15:35:11Z">
+            <Issue>
+             <Item>'AverageVelocity'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="GuessFactorAiming">
+          <Members>
+           <Member Name="#_confidenceFactor">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Created="2013-05-16 15:35:11Z">
+              <Issue>
+               <Item>'GuessFactorAiming._confidenceFactor'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetFuturePosition(AndrewTatham.Logic.IContext,System.Int64,AndrewTatham.Logic.Enemies.IEnemy)">
+            <Messages>
+             <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Created="2013-05-16 15:35:11Z">
+              <Issue>
+               <Item>'GuessFactorAiming.GetFuturePosition(IContext, long, IEnemy)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="LastBlipVelocity">
+          <Members>
+           <Member Name="#GetFuturePosition(AndrewTatham.Logic.IContext,System.Int64,AndrewTatham.Logic.Enemies.IEnemy)">
+            <Messages>
+             <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Created="2013-05-16 15:35:11Z">
+              <Issue>
+               <Item>'LastBlipVelocity.GetFuturePosition(IContext, long, IEnemy)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="PredictionAlgorithm">
+          <Members>
+           <Member Name="#GetFuturePosition(AndrewTatham.Logic.IContext,System.Int64,AndrewTatham.Logic.Enemies.IEnemy)">
+            <Messages>
+             <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Created="2013-05-16 15:35:11Z">
+              <Issue>
+               <Item>'PredictionAlgorithm.GetFuturePosition(IContext, long, IEnemy)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="PredictionCollection">
+          <Messages>
+           <Message TypeName="IdentifiersShouldNotHaveIncorrectSuffix" Category="Microsoft.Naming" CheckId="CA1711" Created="2013-05-16 15:35:11Z">
+            <Issue Name="TypeNoAlternate">
+             <Item>'PredictionCollection'</Item>
+             <Item>Collection</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#GetBestPredictionAlgorithm(AndrewTatham.Logic.Enemies.BlipCollection,System.Int64)">
+            <Messages>
+             <Message Id="absoluteTime" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Created="2013-05-16 15:35:11Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'absoluteTime'</Item>
+               <Item>'PredictionCollection.GetBestPredictionAlgorithm(BlipCollection, long)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="AndrewTatham.Logic.Behaviours.Strategies.Aiming.PredictionAlgorithms.GuessFactor">
+        <Types>
+         <Type Name="GuessFactorData">
+          <Members>
+           <Member Name="#Data">
+            <Messages>
+             <Message TypeName="PropertiesShouldNotReturnArrays" Category="Microsoft.Performance" CheckId="CA1819" Created="2013-05-16 15:35:11Z">
+              <Issue>
+               <Item>'GuessFactorData.Data'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="GuessFactorStatisticsCollection">
+          <Messages>
+           <Message TypeName="IdentifiersShouldNotHaveIncorrectSuffix" Category="Microsoft.Naming" CheckId="CA1711" Created="2013-05-16 15:35:11Z">
+            <Issue Name="TypeNoAlternate">
+             <Item>'GuessFactorStatisticsCollection'</Item>
+             <Item>Collection</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#UpdateHit(AndrewTatham.Logic.Behaviours.Strategies.Aiming.PredictionAlgorithms.GuessFactor.GuessFactorStatsKey,System.Double)">
+            <Messages>
+             <Message Id="gf" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-05-16 15:35:11Z">
+              <Issue Name="MemberParameter">
+               <Item>'GuessFactorStatisticsCollection.UpdateHit(GuessFactorStatsKey, double)'</Item>
+               <Item>gf</Item>
+               <Item>'gf'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#UpdateHit(System.Collections.Generic.IEnumerable`1&lt;System.Tuple`2&lt;AndrewTatham.Logic.Behaviours.Strategies.Aiming.PredictionAlgorithms.GuessFactor.GuessFactorStatsKey,System.Double&gt;&gt;)">
+            <Messages>
+             <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Created="2013-05-16 15:35:11Z">
+              <Issue>
+               <Item>'GuessFactorStatisticsCollection.UpdateHit(IEnumerable&lt;Tuple&lt;GuessFactorStatsKey, double&gt;&gt;)'</Item>
+               <Item>'IEnumerable&lt;Tuple&lt;GuessFactorStatsKey, double&gt;&gt;'</Item>
+              </Issue>
+             </Message>
+             <Message Id="gfs" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-05-16 15:35:11Z">
+              <Issue Name="MemberParameter">
+               <Item>'GuessFactorStatisticsCollection.UpdateHit(IEnumerable&lt;Tuple&lt;GuessFactorStatsKey, double&gt;&gt;)'</Item>
+               <Item>gfs</Item>
+               <Item>'gfs'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="GuessFactorStatsValue">
+          <Members>
+           <Member Name="#GetGuessFactorData()">
+            <Messages>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Created="2013-05-16 15:35:11Z">
+              <Issue Certainty="50">
+               <Item>'GuessFactorStatsValue.GetGuessFactorData()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Update(System.Double)">
+            <Messages>
+             <Message Id="gf" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-05-16 15:35:11Z">
+              <Issue Name="MemberParameter">
+               <Item>'GuessFactorStatsValue.Update(double)'</Item>
+               <Item>gf</Item>
+               <Item>'gf'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="VirtualBullet">
+          <Members>
+           <Member Name="#IsFinished(AndrewTatham.Logic.IContext,AndrewTatham.Logic.Behaviours.Strategies.Aiming.PredictionAlgorithms.GuessFactor.GuessFactorStatsKey&amp;,System.Nullable`1&lt;System.Double&gt;&amp;)">
+            <Messages>
+             <Message Id="1#" TypeName="AvoidOutParameters" Category="Microsoft.Design" CheckId="CA1021" Created="2013-05-16 15:35:11Z">
+              <Issue>
+               <Item>'key'</Item>
+              </Issue>
+             </Message>
+             <Message Id="2#" TypeName="AvoidOutParameters" Category="Microsoft.Design" CheckId="CA1021" Created="2013-05-16 15:35:11Z">
+              <Issue>
+               <Item>'guessFactor'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="VirtualBulletCollection">
+          <Messages>
+           <Message TypeName="IdentifiersShouldNotHaveIncorrectSuffix" Category="Microsoft.Naming" CheckId="CA1711" Created="2013-05-16 15:35:11Z">
+            <Issue Name="TypeNoAlternate">
+             <Item>'VirtualBulletCollection'</Item>
+             <Item>Collection</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#Update(AndrewTatham.Logic.IContext)">
+            <Messages>
+             <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Created="2013-05-16 15:35:11Z">
+              <Issue>
+               <Item>'List&lt;Tuple&lt;GuessFactorStatsKey, double&gt;&gt;'</Item>
+               <Item>'VirtualBulletCollection.Update(IContext)'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Created="2013-05-16 15:35:11Z">
+              <Issue>
+               <Item>'VirtualBulletCollection.Update(IContext)'</Item>
+               <Item>'List&lt;Tuple&lt;GuessFactorStatsKey, double&gt;&gt;'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="AndrewTatham.Logic.Behaviours.Strategies.Movement.Forces">
+        <Types>
+         <Type Name="ForceCollection">
+          <Messages>
+           <Message TypeName="IdentifiersShouldNotHaveIncorrectSuffix" Category="Microsoft.Naming" CheckId="CA1711" Created="2013-01-04 09:39:22Z">
+            <Issue Name="TypeNoAlternate">
+             <Item>'ForceCollection'</Item>
+             <Item>Collection</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="AndrewTatham.Logic.Bullets">
+        <Types>
+         <Type Name="BulletCollection">
+          <Messages>
+           <Message TypeName="IdentifiersShouldNotHaveIncorrectSuffix" Category="Microsoft.Naming" CheckId="CA1711" Created="2013-01-04 09:39:22Z">
+            <Issue Name="TypeNoAlternate">
+             <Item>'BulletCollection'</Item>
+             <Item>Collection</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="AndrewTatham.Logic.Enemies">
+        <Types>
+         <Type Name="Blip">
+          <Members>
+           <Member Name="#.ctor(AndrewTatham.Helpers.Vector,System.Double,Robocode.ScannedRobotEvent)">
+            <Messages>
+             <Message Id="evnt" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberParameter">
+               <Item>'Blip.Blip(Vector, double, ScannedRobotEvent)'</Item>
+               <Item>evnt</Item>
+               <Item>'evnt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="BlipCollection">
+          <Messages>
+           <Message TypeName="IdentifiersShouldNotHaveIncorrectSuffix" Category="Microsoft.Naming" CheckId="CA1711" Created="2013-01-04 09:39:22Z">
+            <Issue Name="TypeNoAlternate">
+             <Item>'BlipCollection'</Item>
+             <Item>Collection</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#Interpolate(System.Int64)">
+            <Messages>
+             <Message Id="t" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberParameterMoreMeaningfulName">
+               <Item>'BlipCollection.Interpolate(long)'</Item>
+               <Item>'t'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Last(System.Int32)">
+            <Messages>
+             <Message Id="p" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberParameterMoreMeaningfulName">
+               <Item>'BlipCollection.Last(int)'</Item>
+               <Item>'p'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="Enemy">
+          <Members>
+           <Member Name="#.ctor(AndrewTatham.Logic.IContext,Robocode.ScannedRobotEvent)">
+            <Messages>
+             <Message Id="evnt" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberParameter">
+               <Item>'Enemy.Enemy(IContext, ScannedRobotEvent)'</Item>
+               <Item>evnt</Item>
+               <Item>'evnt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="EnemyCollection">
+          <Messages>
+           <Message TypeName="IdentifiersShouldNotHaveIncorrectSuffix" Category="Microsoft.Naming" CheckId="CA1711" Created="2013-01-04 09:39:22Z">
+            <Issue Name="TypeNoAlternate">
+             <Item>'EnemyCollection'</Item>
+             <Item>Collection</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#OnScannedRobot(AndrewTatham.Logic.IContext,Robocode.ScannedRobotEvent,AndrewTatham.Logic.Enemies.IEnemy&amp;)">
+            <Messages>
+             <Message Id="2#" TypeName="AvoidOutParameters" Category="Microsoft.Design" CheckId="CA1021" Created="2013-05-16 15:35:11Z">
+              <Issue>
+               <Item>'scannedEnemy'</Item>
+              </Issue>
+             </Message>
+             <Message Id="evnt" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-05-16 15:35:11Z">
+              <Issue Name="MemberParameter">
+               <Item>'EnemyCollection.OnScannedRobot(IContext, ScannedRobotEvent, out IEnemy)'</Item>
+               <Item>evnt</Item>
+               <Item>'evnt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#RegisterBulletHitBullet(Robocode.BulletHitBulletEvent)">
+            <Messages>
+             <Message Id="evnt" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberParameter">
+               <Item>'EnemyCollection.RegisterBulletHitBullet(BulletHitBulletEvent)'</Item>
+               <Item>evnt</Item>
+               <Item>'evnt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#RegisterHitByBullet(Robocode.HitByBulletEvent)">
+            <Messages>
+             <Message Id="evnt" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberParameter">
+               <Item>'EnemyCollection.RegisterHitByBullet(HitByBulletEvent)'</Item>
+               <Item>evnt</Item>
+               <Item>'evnt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="EnemyGuessFactorData">
+          <Members>
+           <Member Name="#Statistics">
+            <Messages>
+             <Message TypeName="PropertiesShouldNotReturnArrays" Category="Microsoft.Performance" CheckId="CA1819" Created="2013-01-04 09:39:22Z">
+              <Issue>
+               <Item>'EnemyGuessFactorData.Statistics'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="EnemyGuessFactorStatisticsCollection">
+          <Messages>
+           <Message TypeName="IdentifiersShouldNotHaveIncorrectSuffix" Category="Microsoft.Naming" CheckId="CA1711" Created="2013-01-04 09:39:22Z">
+            <Issue Name="TypeNoAlternate">
+             <Item>'EnemyGuessFactorStatisticsCollection'</Item>
+             <Item>Collection</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#GetEnemyGuessFactorData()">
+            <Messages>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Created="2013-05-16 15:35:11Z">
+              <Issue Certainty="50">
+               <Item>'EnemyGuessFactorStatisticsCollection.GetEnemyGuessFactorData()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Update(System.Double)">
+            <Messages>
+             <Message Id="gf" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberParameter">
+               <Item>'EnemyGuessFactorStatisticsCollection.Update(double)'</Item>
+               <Item>gf</Item>
+               <Item>'gf'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="IEnemy">
+          <Members>
+           <Member Name="#AcelerationVector">
+            <Messages>
+             <Message Id="Aceleration" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="Member">
+               <Item>Aceleration</Item>
+               <Item>'IEnemy.AcelerationVector'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetEnemyGuessFactorData()">
+            <Messages>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Created="2013-05-16 15:35:11Z">
+              <Issue Certainty="50">
+               <Item>'IEnemy.GetEnemyGuessFactorData()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#LateralAcelerationScalar">
+            <Messages>
+             <Message Id="Aceleration" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="Member">
+               <Item>Aceleration</Item>
+               <Item>'IEnemy.LateralAcelerationScalar'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#LateralAcelerationVector">
+            <Messages>
+             <Message Id="Aceleration" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="Member">
+               <Item>Aceleration</Item>
+               <Item>'IEnemy.LateralAcelerationVector'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#OnScannedRobot(AndrewTatham.Logic.IContext,Robocode.ScannedRobotEvent)">
+            <Messages>
+             <Message Id="evnt" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberParameter">
+               <Item>'IEnemy.OnScannedRobot(IContext, ScannedRobotEvent)'</Item>
+               <Item>evnt</Item>
+               <Item>'evnt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#RadialAcelerationScalar">
+            <Messages>
+             <Message Id="Aceleration" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="Member">
+               <Item>Aceleration</Item>
+               <Item>'IEnemy.RadialAcelerationScalar'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#RadialAcelerationVector">
+            <Messages>
+             <Message Id="Aceleration" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="Member">
+               <Item>Aceleration</Item>
+               <Item>'IEnemy.RadialAcelerationVector'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#RegisterBulletHitBullet(Robocode.BulletHitBulletEvent)">
+            <Messages>
+             <Message Id="evnt" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberParameter">
+               <Item>'IEnemy.RegisterBulletHitBullet(BulletHitBulletEvent)'</Item>
+               <Item>evnt</Item>
+               <Item>'evnt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#RegisterHitByBullet(Robocode.HitByBulletEvent)">
+            <Messages>
+             <Message Id="evnt" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberParameter">
+               <Item>'IEnemy.RegisterHitByBullet(HitByBulletEvent)'</Item>
+               <Item>evnt</Item>
+               <Item>'evnt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="WaveCollection">
+          <Messages>
+           <Message TypeName="IdentifiersShouldNotHaveIncorrectSuffix" Category="Microsoft.Naming" CheckId="CA1711" Created="2013-01-04 09:39:22Z">
+            <Issue Name="TypeNoAlternate">
+             <Item>'WaveCollection'</Item>
+             <Item>Collection</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#RegisterBulletHitBullet(Robocode.BulletHitBulletEvent)">
+            <Messages>
+             <Message Id="evnt" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberParameter">
+               <Item>'WaveCollection.RegisterBulletHitBullet(BulletHitBulletEvent)'</Item>
+               <Item>evnt</Item>
+               <Item>'evnt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#RegisterHitByBullet(Robocode.HitByBulletEvent)">
+            <Messages>
+             <Message Id="evnt" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2013-01-04 09:39:22Z">
+              <Issue Name="MemberParameter">
+               <Item>'WaveCollection.RegisterHitByBullet(HitByBulletEvent)'</Item>
+               <Item>evnt</Item>
+               <Item>'evnt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+      </Namespaces>
+     </Module>
+    </Modules>
+   </Target>
+  </Targets>
+  <Rules>
+   <Rule TypeName="AbstractTypesShouldNotHaveConstructors" Category="Microsoft.Design" CheckId="CA1012">
+    <Resolution Name="Default">Change the accessibility of all public constructors in {0} to protected.</Resolution>
+   </Rule>
+   <Rule TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210">
+    <Resolution Name="NoStrongName">Sign {0} with a strong name key.</Resolution>
+   </Rule>
+   <Rule TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020">
+    <Resolution Name="Default">Consider merging the types defined in '{0}' with another namespace.</Resolution>
+   </Rule>
+   <Rule TypeName="AvoidOutParameters" Category="Microsoft.Design" CheckId="CA1021">
+    <Resolution Name="Default">Consider a design that does not require that {0} be an out parameter.</Resolution>
+   </Rule>
+   <Rule TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823">
+    <Resolution Name="Default">It appears that field {0} is never used or is only ever assigned to. Use this field or remove it.</Resolution>
+   </Rule>
+   <Rule TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702">
+    <Resolution Name="MemberParameterShouldBeCompoundWord">In member {0}, the discrete term '{1}' in parameter name {2} should be expressed as a compound word, '{3}'.</Resolution>
+    <Resolution Name="MemberShouldBeDiscreteTerm">The compound word '{0}' in member name {1} exists as a discrete term. If your usage is intended to be single word, case it as '{2}' or strip the first token entirely if it represents any sort of Hungarian notation.</Resolution>
+   </Rule>
+   <Rule TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026">
+    <Resolution Name="Default">Replace method {0} with an overload that supplies all default arguments.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031">
+    <Resolution Name="Default">Modify {0} to catch a more specific exception than {1} or rethrow the exception.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotDeclareReadOnlyMutableReferenceTypes" Category="Microsoft.Security" CheckId="CA2104">
+    <Resolution Name="Default">Remove the read-only designation from {0} or change the field to one that is an immutable reference type. If the reference type {1} is, in fact, immutable, exclude this message.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051">
+    <Resolution Name="Default">Because field {0} is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002">
+    <Resolution Name="Default">Change {0} in {1} to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006">
+    <Resolution Name="Default">Consider a design where {0} doesn't nest generic type {1}.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709">
+    <Resolution Name="Type">Correct the casing of '{0}' in type name {1} by changing it to '{2}'.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704">
+    <Resolution Name="Member">Correct the spelling of '{0}' in member name {1} or remove it entirely if it represents any sort of Hungarian notation.</Resolution>
+    <Resolution Name="MemberParameter">In method {0}, correct the spelling of '{1}' in parameter name {2} or remove it entirely if it represents any sort of Hungarian notation.</Resolution>
+    <Resolution Name="MemberParameterMoreMeaningfulName">In method {0}, consider providing a more meaningful name than parameter name {1}.</Resolution>
+    <Resolution Name="Namespace">Correct the spelling of '{0}' in namespace name '{1}'.</Resolution>
+    <Resolution Name="Type">Correct the spelling of '{0}' in type name {1}.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldNotContainTypeNames" Category="Microsoft.Naming" CheckId="CA1720">
+    <Resolution Name="LanguageSpecificMember">Consider replacing the language-specific data type identifier '{0}' in member name {1} with either a language-independent equivalent or a more generic term, such as 'value'.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldNotHaveIncorrectSuffix" Category="Microsoft.Naming" CheckId="CA1711">
+    <Resolution Name="TypeNoAlternate">Rename type name {0} so that it does not end in '{1}'.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldNotMatchKeywords" Category="Microsoft.Naming" CheckId="CA1716">
+    <Resolution Name="Member">Rename virtual/interface member {0} so that it no longer conflicts with the reserved language keyword '{1}'. Using a reserved keyword as the name of a virtual/interface member makes it harder for consumers in other languages to override/implement the member.</Resolution>
+   </Rule>
+   <Rule TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014">
+    <Resolution Name="Default">Mark {0} with CLSCompliant(true) because it exposes externally visible types.</Resolution>
+   </Rule>
+   <Rule TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211">
+    <Resolution Name="Default">Consider making {0} non-public or a constant.</Resolution>
+   </Rule>
+   <Rule TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225">
+    <Resolution Name="Default">Provide a method named '{0}' as a friendly alternate for operator {1}.</Resolution>
+   </Rule>
+   <Rule TypeName="OverloadOperatorEqualsOnOverloadingAddAndSubtract" Category="Microsoft.Design" CheckId="CA1013">
+    <Resolution Name="Default">Consider adding an overload of the equality operator for {0} that takes the same parameters as {1}.</Resolution>
+   </Rule>
+   <Rule TypeName="PropertiesShouldNotBeWriteOnly" Category="Microsoft.Design" CheckId="CA1044">
+    <Resolution Name="AddGetter">Because property {0} is write-only, either add a property getter with an accessibility that is greater than or equal to its setter or convert this property into a method.</Resolution>
+    <Resolution Name="MakeMoreAccessible">Because the property getter for {0} is less visible than its setter, either increase the accessibility of its getter or decrease the accessibility of its setter.</Resolution>
+   </Rule>
+   <Rule TypeName="PropertiesShouldNotReturnArrays" Category="Microsoft.Performance" CheckId="CA1819">
+    <Resolution Name="Default">Change {0} to return a collection or make it a method.</Resolution>
+   </Rule>
+   <Rule TypeName="ProvideObsoleteAttributeMessage" Category="Microsoft.Design" CheckId="CA1041">
+    <Resolution Name="Default">Provide a message for the ObsoleteAttribute that marks {0}.</Resolution>
+   </Rule>
+   <Rule TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801">
+    <Resolution Name="Default">Parameter {0} of {1} is never used. Remove the parameter or use it in the method body.</Resolution>
+   </Rule>
+   <Rule TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305">
+    <Resolution Name="IFormatProviderAlternateString">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be displayed to the user, specify {3} as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify {4}.</Resolution>
+   </Rule>
+   <Rule TypeName="UseEventsWhereAppropriate" Category="Microsoft.Design" CheckId="CA1030">
+    <Resolution Name="Default">Consider making {0} an event.</Resolution>
+   </Rule>
+   <Rule TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024">
+    <Resolution Name="Default">Change {0} to a property if appropriate.</Resolution>
+   </Rule>
+  </Rules>
+ </FxCopReport>
+</FxCopProject>
